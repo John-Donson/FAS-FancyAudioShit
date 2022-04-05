@@ -31,7 +31,7 @@ nav a {
   font-size: 0.8rem;
 }
 
-.container {
+div.container {
   display: inline-block;
   width: 100%;
   height: auto;
@@ -96,6 +96,10 @@ h2 {
     vertical-align: middle;
     /* padding-top: 5vh; */
   }
+  footer {
+    height: 12vh;
+    padding-bottom: 0.5rem;
+  }
 }
 
 @media all and (min-width: 700px) {
@@ -121,9 +125,12 @@ h2 {
 
 @media screen and (min-width: 1281px) {
   div.container {
-    display: inline-block;
-    max-width: 32vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 33vw;
     border: 0;
+    margin: 0;
   }
 
   main {
@@ -132,16 +139,22 @@ h2 {
     background-size: cover;
   }
 
-  div:first-child {
+  /* div:first-child {
     margin-left: 0.7vw;
+  } */
+
+  div.outer {
+    display: flex;
   }
   div.image {
+    /* display: flex; */
     max-width: 90%;
     height: auto;
     margin: 0 auto;
   }
   img {
-    width: 30vw;
+    width: 28vw;
+    max-height: auto;
   }
   div.text {
     max-width: 95%;
